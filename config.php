@@ -7,7 +7,7 @@
     $config = array();
 
     if(ENVIRONMENT == 'development'){
-        define("BASE_URL","http://localhost/LojaEDU/");
+        define("BASE_URL","http://localhost/e-commerce/");
         $config['dbname'] = 'bancoLoja';
         $config['host'] = 'localhost';
         $config['dbuser'] = 'root';
