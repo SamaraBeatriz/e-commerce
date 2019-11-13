@@ -7,8 +7,15 @@
             FROM products";
             $sql = $this->db->query($sql);
 
-            if($sql->rowCount() > 0){
+            if($sql->rowCount() > 0)
+            {
                 $array = $sql->fetchAll();
+                
+                // buscar as imagens de cada produto
+                foreach($array as $key => $item)
+                {
+                    $array[$key]['images'] = this->getImagesByProductId($item['id']);
+                }
             }
             return $array;
         }

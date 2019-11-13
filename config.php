@@ -8,7 +8,7 @@
 
     if(ENVIRONMENT == 'development'){
         define("BASE_URL","http://localhost/e-commerce/");
-        $config['dbname'] = 'bancoLoja';
+        $config['dbname'] = 'bancoloja';
         $config['host'] = 'localhost';
         $config['dbuser'] = 'root';
         $config['dbpass'] = '';
