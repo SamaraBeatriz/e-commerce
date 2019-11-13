@@ -14,9 +14,28 @@
                 // buscar as imagens de cada produto
                 foreach($array as $key => $item)
                 {
-                    $array[$key]['images'] = this->getImagesByProductId($item['id']);
+                    $array[$key]['images'] = $this->getImagesByProductId($item['id']);
                 }
             }
+            return $array;
+        }
+        // método para buscar as imagens
+        public function getImagesByProductId($id)
+        {
+            $array = array();
+            
+            $sql = "SELECT url FROM products_image WHERE id_product = :id";
+            $sql = $this->db->prepare($sql);
+            $sql->bindValue(":id", $id);
+            $sql->execute();
+            
+            //verificando se existe imagem no banco
+            if($sql->rowCount() > 0)
+            {
+                $array = $sql->fetchAll();
+            }
+            
+            // retornar as imagens 
             return $array;
         }
     }
