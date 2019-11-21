@@ -6,19 +6,24 @@
             <div class="product_tag product_tag_blue">NEW</div>
         </div>
         <div class="product_image">
-            <img src="Media/Products/1.jpg" width="100%" />
+            <img src="media/products/<?php echo $images[0]['url'];?>" width="100%" />
         </div>
         <div class="product_name">
-            Monitor X
+            <?php echo $name; ?>
         </div>
         <div class="product_brand">
-            Marca Y
+            <?php echo $brand_name; ?>
         </div>
         <div class="product_price_from">
-            R$ xxx
+            <?php 
+                if($price_from != '0')
+                {
+                    echo 'R$'.number_format($price_from,2',','.');
+                }
+            ?>
         </div>
         <div class="product_price">
-            R$ yyy
+            <?php echo 'R$'.number_format($price,2,','.'.');?>
         </div>
         
         <div style="clear:both;"></div>
