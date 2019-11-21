@@ -35,7 +35,7 @@
                 $array = $sql->fetchAll();
             }
             
-            // retornar as imagens 
+            // retornar as imagens do produto
             return $array;
         }
     }
