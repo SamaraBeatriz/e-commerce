@@ -1,4 +1,6 @@
 <?php
+
+ini_set('default_charset','utf-8');
     class products extends model{
         public function getList(){
             $array = array();
@@ -24,7 +26,7 @@
         {
             $array = array();
             
-            $sql = "SELECT url FROM products_image WHERE id_product = :id";
+            $sql = "SELECT url FROM products_images WHERE id_product = :id";
             $sql = $this->db->prepare($sql);
             $sql->bindValue(":id", $id);
             $sql->execute();

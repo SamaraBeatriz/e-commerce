@@ -1,4 +1,6 @@
 <?php
+ini_set('default_charset','utf-8');
+
     class homeController extends controller {
         private $user;
         

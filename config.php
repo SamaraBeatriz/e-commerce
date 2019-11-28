@@ -1,4 +1,6 @@
 <?php
+ini_set('default_charset','utf-8');
+
     require 'environment.php';
 
     global $config;
